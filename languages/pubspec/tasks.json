@@ -2,9 +2,14 @@
   {
     "label": "Pubspec — pub get",
     "command": "flutter",
-    "args": ["pub", "get"],
+    "args": [
+      "pub",
+      "get"
+    ],
     "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
+    "tags": [
+      "pubspec"
+    ],
     "reveal": "always",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -13,9 +18,14 @@
   {
     "label": "Pubspec — pub upgrade",
     "command": "flutter",
-    "args": ["pub", "upgrade"],
+    "args": [
+      "pub",
+      "upgrade"
+    ],
     "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
+    "tags": [
+      "pubspec"
+    ],
     "reveal": "always",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -24,9 +34,15 @@
   {
     "label": "Pubspec — pub upgrade --major-versions",
     "command": "flutter",
-    "args": ["pub", "upgrade", "--major-versions"],
+    "args": [
+      "pub",
+      "upgrade",
+      "--major-versions"
+    ],
     "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
+    "tags": [
+      "pubspec"
+    ],
     "reveal": "always",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -35,9 +51,14 @@
   {
     "label": "Pubspec — pub outdated",
     "command": "flutter",
-    "args": ["pub", "outdated"],
+    "args": [
+      "pub",
+      "outdated"
+    ],
     "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
+    "tags": [
+      "pubspec"
+    ],
     "reveal": "always",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -46,9 +67,13 @@
   {
     "label": "Pubspec — flutter clean",
     "command": "flutter",
-    "args": ["clean"],
+    "args": [
+      "clean"
+    ],
     "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
+    "tags": [
+      "pubspec"
+    ],
     "reveal": "always",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
@@ -57,58 +82,30 @@
   {
     "label": "Pubspec — flutter doctor",
     "command": "flutter",
-    "args": ["doctor", "-v"],
+    "args": [
+      "doctor",
+      "-v"
+    ],
     "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
+    "tags": [
+      "pubspec"
+    ],
     "reveal": "always",
     "use_new_terminal": false,
     "allow_concurrent_runs": true,
     "save": "current"
   },
   {
-    "label": "Flutter — run (default device)",
-    "command": "flutter",
-    "args": ["run"],
-    "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
-    "reveal": "always",
-    "use_new_terminal": false,
-    "allow_concurrent_runs": false,
-    "save": "current"
-  },
-  {
-    "label": "Flutter — run on macOS",
-    "command": "flutter",
-    "args": ["run", "-d", "macos"],
-    "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
-    "reveal": "always",
-    "use_new_terminal": false,
-    "allow_concurrent_runs": false,
-    "save": "current"
-  },
-  {
-    "label": "Flutter — run on Chrome",
-    "command": "flutter",
-    "args": ["run", "-d", "chrome"],
-    "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
-    "reveal": "always",
-    "use_new_terminal": false,
-    "allow_concurrent_runs": false,
-    "save": "current"
-  },
-  {
-    "label": "Flutter — run on macOS (debugger-ready, port 8181)",
-    "command": "flutter",
+    "label": "Flutter — pick & run from .zed/debug.json",
+    "command": "bash",
     "args": [
-      "run",
-      "-d", "macos",
-      "--vm-service-port=8181",
-      "--disable-service-auth-codes"
+      "-c",
+      "'echo IyEvdXNyL2Jpbi9lbnYgYmFzaAojIGZsdXR0ZXItcGljay5zaCDigJQgcmVhZCAuemVkL2RlYnVnLmpzb24sIHBpY2sgYSBGbHV0dGVyIGxhdW5jaCBjb25maWcsCiMgYW5kIGV4ZWMgYGZsdXR0ZXIgcnVuYCB3aXRoIHRoZSBtYXRjaGluZyB0b29sQXJncyArIGhvdC1yZWxvYWQtZnJpZW5kbHkKIyBmbGFncyAoLS12bS1zZXJ2aWNlLXBvcnQ9ODE4MSAtLWRpc2FibGUtc2VydmljZS1hdXRoLWNvZGVzKSBhdXRvLWluamVjdGVkCiMgc28gdGVybWluYWwga2V5c3Ryb2tlIGhvdCByZWxvYWQgQU5EIFplZC1kZWJ1Z2dlci1hdHRhY2ggYm90aCBrZWVwIHdvcmtpbmcuCiMKIyBXaHk6IFplZCdzIGRlYnVnZ2VyIFVJIGRvZXNuJ3QgeWV0IGV4cG9zZSBob3QgcmVsb2FkIGFzIGEgYnV0dG9uCiMgKHplZCM1MTg3MykuIFJ1bm5pbmcgZmx1dHRlciBvdXJzZWx2ZXMgKGluc3RlYWQgb2YgdmlhIERBUCBsYXVuY2gpIGxldHMKIyB1cyBrZWVwIHRoZSB0ZXJtaW5hbC1iYXNlZCByZWxvYWQgd29ya2Zsb3cgd2hpbGUgc3RpbGwgbGV0dGluZyBaZWQncwojIGRlYnVnZ2VyIGF0dGFjaCBmb3IgYnJlYWtwb2ludHMg4oCUIHNpbmdsZSBzb3VyY2Ugb2YgdHJ1dGg6IGRlYnVnLmpzb24uCiMKIyBVc2FnZTogZmx1dHRlci1waWNrLnNoIFt3b3JrdHJlZV9yb290XQojIERlZmF1bHQgd29ya3RyZWVfcm9vdDogJFpFRF9XT1JLVFJFRV9ST09UIG9yICQocHdkKS4KCnNldCAtZXVvIHBpcGVmYWlsCgpST09UPSIkezE6LSR7WkVEX1dPUktUUkVFX1JPT1Q6LSQocHdkKX19IgpGPSIkUk9PVC8uemVkL2RlYnVnLmpzb24iCgppZiBbWyAhIC1mICIkRiIgXV07IHRoZW4KICBlY2hvICJmbHV0dGVyLXBpY2s6IG5vIGRlYnVnLmpzb24gYXQgJEYiID4mMgogIGV4aXQgNjYKZmkKCmlmICEgY29tbWFuZCAtdiBqcSA+L2Rldi9udWxsIDI+JjE7IHRoZW4KICBjYXQgPiYyIDw8RU9GCmZsdXR0ZXItcGljazoganEgaXMgcmVxdWlyZWQuCiAgYnJldyBpbnN0YWxsIGpxCkVPRgogIGV4aXQgMTI3CmZpCgojIFN0cmlwIEpTT05DIHRyYWlsaW5nIGNvbW1hcyBzbyBqcSBjYW4gcGFyc2UgdGhlIGZpbGUuIFVzZXMgcGVybAojICgtMDc3NyBzbHVycHMgdGhlIHdob2xlIGZpbGUpIHNvIGl0IGhhbmRsZXMgdHJhaWxpbmcgY29tbWFzIGFjcm9zcwojIGxpbmUgYnJlYWtzLCB3aGljaCBCU0Qgc2VkIG9uIG1hY09TIGNhbid0IGRvIHdpdGhvdXQgYW4gYXdrd2FyZAojIGxhYmVsLWJhc2VkIHNsdXJwIGluY2FudGF0aW9uLgpKU09OPSQocGVybCAtMDc3NyAtcGUgJ3MvLChccypbfVxdXSkvJDEvZycgIiRGIikKCiMgUHVsbCBhbGwgRmx1dHRlciBsYXVuY2ggY29uZmlncy4gKEF2b2lkaW5nIGBtYXBmaWxlYCBiZWNhdXNlIG1hY09TCiMgc2hpcHMgYmFzaCAzLjIuKQpsYWJlbHM9KCkKd2hpbGUgSUZTPSByZWFkIC1yIGxpbmU7IGRvCiAgbGFiZWxzKz0oIiRsaW5lIikKZG9uZSA8IDwoZWNobyAiJEpTT04iIHwganEgLXIgJwogIFsuW10gfCBzZWxlY3QoLnR5cGUgPT0gImZsdXR0ZXIiIGFuZCAucmVxdWVzdCA9PSAibGF1bmNoIildIHwgLltdLmxhYmVsCicpCgppZiBbWyAkeyNsYWJlbHNbQF19IC1lcSAwIF1dOyB0aGVuCiAgZWNobyAiZmx1dHRlci1waWNrOiBubyBGbHV0dGVyICdsYXVuY2gnIGNvbmZpZ3MgaW4gJEYiID4mMgogIGV4aXQgNjUKZmkKCiMgUGljayBhIGNvbmZpZyDigJQgZnpmIGlmIGF2YWlsYWJsZSwgZWxzZSBCYXNoIHNlbGVjdC4KY2hvc2VuPSIiCmlmIGNvbW1hbmQgLXYgZnpmID4vZGV2L251bGwgMj4mMTsgdGhlbgogIGNob3Nlbj0kKHByaW50ZiAnJXNcbicgIiR7bGFiZWxzW0BdfSIgfCBmemYgLS1wcm9tcHQ9IkZsdXR0ZXIgY29uZmlnOiAiIC0taGVpZ2h0PTQwJSAtLXJldmVyc2UpIHx8IHRydWUKZWxzZQogIGVjaG8gIlBpY2sgYSBGbHV0dGVyIGNvbmZpZzoiID4mMgogIFBTMz0iPiAiCiAgc2VsZWN0IGl0ZW0gaW4gIiR7bGFiZWxzW0BdfSI7IGRvCiAgICBjaG9zZW49IiRpdGVtIgogICAgYnJlYWsKICBkb25lCmZpCgpbWyAteiAiJGNob3NlbiIgXV0gJiYgeyBlY2hvICJmbHV0dGVyLXBpY2s6IGNhbmNlbGxlZCIgPiYyOyBleGl0IDE7IH0KCiMgRXh0cmFjdCB0aGUgY2hvc2VuIGNvbmZpZy4KQ09ORklHPSQoZWNobyAiJEpTT04iIHwganEgLS1hcmcgbGFiZWwgIiRjaG9zZW4iICcuW10gfCBzZWxlY3QoLmxhYmVsID09ICRsYWJlbCknKQpwcm9ncmFtPSQoZWNobyAiJENPTkZJRyIgfCBqcSAtciAnLnByb2dyYW0gLy8gImxpYi9tYWluLmRhcnQiJykKY3dkPSQoZWNobyAiJENPTkZJRyIgfCBqcSAtciAnLmN3ZCAvLyAiLiInKQoKIyBTdWJzdGl0dXRlIFplZCB2YXJpYWJsZXMgaW4gY3dkIG91cnNlbHZlcyAod2UgcmVhZCB0aGUgZmlsZSBkaXJlY3RseSkuCmN3ZD0iJHtjd2QvL1wkWkVEX1dPUktUUkVFX1JPT1QvJFJPT1R9Igpjd2Q9IiR7Y3dkLy9cJFpFRF9ESVJOQU1FLyR7WkVEX0RJUk5BTUU6LSRST09UfX0iCltbICIkY3dkIiA9PSAiLiIgXV0gJiYgY3dkPSIkUk9PVCIKCiMgQ29sbGVjdCB0b29sQXJncy4gKEF2b2lkaW5nIGBtYXBmaWxlYCBmb3IgbWFjT1MgYmFzaCAzLjIuKQp0b29sQXJncz0oKQp3aGlsZSBJRlM9IHJlYWQgLXIgYXJnOyBkbwogIHRvb2xBcmdzKz0oIiRhcmciKQpkb25lIDwgPChlY2hvICIkQ09ORklHIiB8IGpxIC1yICcudG9vbEFyZ3NbXT8gLy8gZW1wdHknKQoKIyBJbmplY3QgaG90LXJlbG9hZC1mcmllbmRseSBmbGFncyBvbmx5IGlmIG5vdCBhbHJlYWR5IHByZXNlbnQuCiMgKGJhc2ggMy4yICsgc2V0IC11IHRyaXBzIG9uIGVtcHR5IGAke2FycltAXX1gIOKAlCBndWFyZCB3aXRoIGxlbmd0aC4pCmhhc19wb3J0PTAKaGFzX2F1dGg9MAppZiBbWyAkeyN0b29sQXJnc1tAXX0gLWd0IDAgXV07IHRoZW4KICBmb3IgYSBpbiAiJHt0b29sQXJnc1tAXX0iOyBkbwogICAgW1sgIiRhIiA9PSAtLXZtLXNlcnZpY2UtcG9ydD0qIF1dICYmIGhhc19wb3J0PTEKICAgIFtbICIkYSIgPT0gLS1kaXNhYmxlLXNlcnZpY2UtYXV0aC1jb2RlcyBdXSAmJiBoYXNfYXV0aD0xCiAgZG9uZQpmaQpbWyAiJGhhc19wb3J0IiAtZXEgMCBdXSAmJiB0b29sQXJncys9KCItLXZtLXNlcnZpY2UtcG9ydD04MTgxIikKW1sgIiRoYXNfYXV0aCIgLWVxIDAgXV0gJiYgdG9vbEFyZ3MrPSgiLS1kaXNhYmxlLXNlcnZpY2UtYXV0aC1jb2RlcyIpCgpjZCAiJGN3ZCIKCiMgUHJldHR5LXByaW50IHRoZSByZXNvbHZlZCBjb21tYW5kLgpwcmludGYgJ1wwMzNbMTszNm3ilrZcMDMzWzBtIFwwMzNbMW1mbHV0dGVyXDAzM1swbSBydW4gLXQgJXMnICIkcHJvZ3JhbSIKZm9yIGEgaW4gIiR7dG9vbEFyZ3NbQF19IjsgZG8gcHJpbnRmICcgJXEnICIkYSI7IGRvbmUKcHJpbnRmICdcblxuJwoKZXhlYyBmbHV0dGVyIHJ1biAtdCAiJHByb2dyYW0iICIke3Rvb2xBcmdzW0BdfSIK | base64 --decode | bash -s -- \"$ZED_WORKTREE_ROOT\"'"
     ],
-    "cwd": "$ZED_DIRNAME",
-    "tags": ["pubspec"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": [
+      "pubspec"
+    ],
     "reveal": "always",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,

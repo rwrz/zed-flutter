@@ -1,6 +1,24 @@
 [
   {
-    "label": "Flutter — attach (macOS, port 8181)",
+    "label": "Smoke — run on macOS",
+    "adapter": "Dart",
+    "type": "flutter",
+    "request": "launch",
+    "program": "lib/main.dart",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "toolArgs": ["-d", "macos"]
+  },
+  {
+    "label": "Smoke — run on Chrome",
+    "adapter": "Dart",
+    "type": "flutter",
+    "request": "launch",
+    "program": "lib/main.dart",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "toolArgs": ["-d", "chrome"]
+  },
+  {
+    "label": "Smoke — attach (port 8181)",
     "adapter": "Dart",
     "type": "flutter",
     "request": "attach",
