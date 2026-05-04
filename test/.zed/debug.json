@@ -22,6 +22,6 @@
     "adapter": "Dart",
     "type": "flutter",
     "request": "attach",
-    "vmServiceUri": "ws://127.0.0.1:8181/ws"
+    "vmServiceUri": "http://127.0.0.1:8181/"
   }
 ]

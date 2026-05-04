@@ -77,7 +77,7 @@ The upstream Dart extension's DAP supports `request: "attach"` +
 `vmServiceUri` (see `dart.rs:139` in `zed-extensions/dart`). Our
 `Flutter — run on macOS (debugger-ready, port 8181)` task pins
 `--vm-service-port=8181 --disable-service-auth-codes` so the URI is
-predictable (`ws://127.0.0.1:8181/ws`). Users drop a matching
+predictable (`http://127.0.0.1:8181/`). Users drop a matching
 `.zed/debug.json` (template at `test/.zed/debug.json`) and Zed's
 debugger attaches.
 

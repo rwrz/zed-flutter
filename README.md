@@ -48,7 +48,7 @@ automatically. No extension changes needed.
 
 Two flags get auto-injected if you haven't already added them:
 `--vm-service-port=8181 --disable-service-auth-codes`. They pin the VM
-service to a predictable URI (`ws://127.0.0.1:8181/ws`) so:
+service to a predictable URI (`http://127.0.0.1:8181/`) so:
 
 1. The terminal stays interactive — keystroke hot reload works (next
    section).
@@ -108,7 +108,7 @@ alongside your `launch` configs in `.zed/debug.json`:
   "adapter": "Dart",
   "type": "flutter",
   "request": "attach",
-  "vmServiceUri": "ws://127.0.0.1:8181/ws"
+  "vmServiceUri": "http://127.0.0.1:8181/"
 }
 ```
 
@@ -116,7 +116,7 @@ Workflow:
 
 1. Click ▶ on the pubspec → **Flutter — pick & run from
    .zed/debug.json** → pick a launch config. Flutter starts; the VM
-   service is at `ws://127.0.0.1:8181/ws`.
+   service is at `http://127.0.0.1:8181/`.
 2. Command palette → `debugger: start` → pick **Flutter — attach
    (port 8181)**. Zed attaches; breakpoints in `.dart` files now hit.
 3. Hot reload keeps working: focus the terminal, `cmd-r` to reload.
