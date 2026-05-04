@@ -97,5 +97,21 @@
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "save": "current"
+  },
+  {
+    "label": "Flutter — run on macOS (debugger-ready, port 8181)",
+    "command": "flutter",
+    "args": [
+      "run",
+      "-d", "macos",
+      "--vm-service-port=8181",
+      "--disable-service-auth-codes"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
   }
 ]

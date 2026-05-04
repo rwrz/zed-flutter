@@ -1,0 +1,9 @@
+[
+  {
+    "label": "Flutter — attach (macOS, port 8181)",
+    "adapter": "Dart",
+    "type": "flutter",
+    "request": "attach",
+    "vmServiceUri": "ws://127.0.0.1:8181/ws"
+  }
+]

@@ -67,6 +67,27 @@ delivering the keystroke to the new view (see Zed key-bindings.md).
 Once #51873 lands and we can register custom debug-adapter actions,
 this whole section should disappear.
 
+## Combining with Zed's debugger
+
+The upstream Dart extension's DAP supports `request: "attach"` +
+`vmServiceUri` (see `dart.rs:139` in `zed-extensions/dart`). Our
+`Flutter — run on macOS (debugger-ready, port 8181)` task pins
+`--vm-service-port=8181 --disable-service-auth-codes` so the URI is
+predictable (`ws://127.0.0.1:8181/ws`). Users drop a matching
+`.zed/debug.json` (template at `test/.zed/debug.json`) and Zed's
+debugger attaches.
+
+This gives both surfaces simultaneously: hot reload via terminal
+keystrokes (we own that), breakpoints/step/watches via Zed's
+debugger UI (upstream owns that). The debug session **attaches**
+rather than launches, so killing the app is still a terminal `q`.
+
+Why pin a port instead of letting Flutter choose? Because the alternative
+is the user copy-pasting the random URI into `.zed/debug.json` every
+run. Pinning the port is a one-time setup; the auth-code skip is the
+only way to get a stable URI shape (`/ws` instead of `/<token>=/ws`).
+Both flags are local-dev-only.
+
 ## Why `flutter pub` (not `dart pub`)?
 
 This is the Flutter extension — Flutter projects need `flutter pub` to
