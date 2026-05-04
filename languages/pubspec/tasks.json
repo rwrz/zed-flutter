@@ -64,5 +64,38 @@
     "use_new_terminal": false,
     "allow_concurrent_runs": true,
     "save": "current"
+  },
+  {
+    "label": "Flutter — run (default device)",
+    "command": "flutter",
+    "args": ["run"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
+  },
+  {
+    "label": "Flutter — run on macOS",
+    "command": "flutter",
+    "args": ["run", "-d", "macos"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
+  },
+  {
+    "label": "Flutter — run on Chrome",
+    "command": "flutter",
+    "args": ["run", "-d", "chrome"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
   }
 ]

@@ -40,6 +40,33 @@ a tiny LSP server that emits `textDocument/codeLens` (~300–400 LOC of
 Rust + a binary release pipeline). Worth doing if the gutter affordance
 ever feels wrong; not worth it yet.
 
+## Hot reload via terminal — why this and not DAP?
+
+The upstream `zed-extensions/dart` already wires Flutter's DAP
+(`flutter debug_adapter`), and that adapter implements hot reload as
+DAP custom requests. **But** Zed's debugger UI has no surface for
+custom DAP requests yet — that's blocked on the core
+[zed#51873](https://github.com/zed-industries/zed/issues/51873) and the
+extension-side [zed-extensions/dart#72](https://github.com/zed-extensions/dart/pull/72).
+
+Until both land, hot reload happens through `flutter run`'s own
+interactive shell (`r` to reload, `R` to restart, `q` to quit). Our
+extension ships:
+
+1. `Flutter — run on macOS / Chrome / default device` tasks
+   (gutter-button reachable from `pubspec.yaml`).
+2. A documented keymap snippet (in README) that binds `cmd-r` /
+   `cmd-shift-r` / `cmd-q` to `terminal::SendText` while the terminal
+   pane is focused.
+
+The "save in editor auto-fires hot reload" workflow that JetBrains
+ships isn't reliably implementable today: the
+`workspace::SendKeystrokes` chain trick has documented async limits
+that prevent "focus terminal → send keystroke" from actually
+delivering the keystroke to the new view (see Zed key-bindings.md).
+Once #51873 lands and we can register custom debug-adapter actions,
+this whole section should disappear.
+
 ## Why `flutter pub` (not `dart pub`)?
 
 This is the Flutter extension — Flutter projects need `flutter pub` to
