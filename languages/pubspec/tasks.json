@@ -1,0 +1,68 @@
+[
+  {
+    "label": "Pubspec — pub get",
+    "command": "flutter",
+    "args": ["pub", "get"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
+  },
+  {
+    "label": "Pubspec — pub upgrade",
+    "command": "flutter",
+    "args": ["pub", "upgrade"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
+  },
+  {
+    "label": "Pubspec — pub upgrade --major-versions",
+    "command": "flutter",
+    "args": ["pub", "upgrade", "--major-versions"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
+  },
+  {
+    "label": "Pubspec — pub outdated",
+    "command": "flutter",
+    "args": ["pub", "outdated"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
+  },
+  {
+    "label": "Pubspec — flutter clean",
+    "command": "flutter",
+    "args": ["clean"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "save": "current"
+  },
+  {
+    "label": "Pubspec — flutter doctor",
+    "command": "flutter",
+    "args": ["doctor", "-v"],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["pubspec"],
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true,
+    "save": "current"
+  }
+]

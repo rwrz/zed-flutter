@@ -1,0 +1,5 @@
+name = "Pubspec"
+grammar = "yaml"
+path_suffixes = ["pubspec.yaml", "pubspec.yml"]
+line_comments = ["# "]
+tab_size = 2
