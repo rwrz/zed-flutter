@@ -51,6 +51,14 @@ if [[ ${#labels[@]} -eq 0 ]]; then
 fi
 
 # Pick a config — fzf if available, else Bash select.
+#
+# We MUST redirect from /dev/tty here. When this script is invoked via
+# the embedded `echo … | base64 -d | bash -s` pipeline (the pattern
+# tasks.json uses to ship the script inline), stdin is already
+# exhausted by `bash -s` reading the script body — so a bare `select`
+# would read EOF immediately and never wait for input. Reading from
+# /dev/tty bypasses the pipe and talks to the terminal directly. fzf
+# already opens /dev/tty internally, so its branch doesn't need this.
 chosen=""
 if command -v fzf >/dev/null 2>&1; then
   chosen=$(printf '%s\n' "${labels[@]}" | fzf --prompt="Flutter config: " --height=40% --reverse) || true
@@ -60,7 +68,7 @@ else
   select item in "${labels[@]}"; do
     chosen="$item"
     break
-  done
+  done < /dev/tty
 fi
 
 [[ -z "$chosen" ]] && { echo "flutter-pick: cancelled" >&2; exit 1; }
